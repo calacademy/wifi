@@ -1,0 +1,16 @@
+/* line 5, ../sass/global.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-size: 16px;
+  line-height: 20px;
+}
+/* line 6, ../sass/global.scss */
+body, body *, body *:focus {
+  font-family: 'Whitney A', 'Whitney B', Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
+}

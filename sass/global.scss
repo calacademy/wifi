@@ -1,0 +1,20 @@
+@import "global-variables";
+@import "compass/css3/opacity";
+@import "compass/css3/user-interface";
+
+body {
+	&, *, *:focus {
+		font-family: 'Whitney A', 'Whitney B', Helvetica, Arial, sans-serif;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		outline: none !important;
+	}
+
+	margin: 0;
+	padding: 0;
+	font-weight: $book;
+	background-color: $white;
+	color: $black;
+
+	font-size: $global;
+	line-height: $globalLineHeight;
+}
