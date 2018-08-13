@@ -1,10 +1,24 @@
 @import "global-variables";
-@import "compass/css3/opacity";
-@import "compass/css3/user-interface";
+@import "compass/css3";
+@import "compass/utilities";
+
+@include keyframes(fade-in) {
+	from {
+		@include opacity(0);
+	}
+	to {
+		@include opacity(1);
+	}
+}
+
+html, body {
+	height: 100%;
+	min-height: 100%;
+}
 
 body {
 	&, *, *:focus {
-		font-family: 'Whitney A', 'Whitney B', Helvetica, Arial, sans-serif;
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 		outline: none !important;
 	}
@@ -13,8 +27,233 @@ body {
 	padding: 0;
 	font-weight: $book;
 	background-color: $white;
-	color: $black;
+	color: $grey;
 
 	font-size: $global;
 	line-height: $globalLineHeight;
+
+	* {
+		margin: 0;
+		padding: 0;
+		text-decoration: none;
+		@include box-sizing(border-box);
+	}
+
+	a, .button {
+		&:active,
+		&:hover {
+			@include opacity(0.7);
+		}	
+	}
+
+	#container {
+		background-color: $white;
+
+		section {
+			padding: $padding;
+			padding-bottom: $padding * 2;
+
+			h1 {
+				font-weight: $bold;
+				font-size: $header;
+				line-height: $headerLineHeight;	
+			}
+
+			h2 {
+				color: $black;
+				font-weight: $bold;
+				font-size: $subheader;
+				line-height: $subheaderLineHeight;	
+			}
+
+			p {
+				margin-top: $padding;
+				margin-bottom: $padding;
+			}
+
+			input,
+			.button {
+				border: 0;
+				padding: $padding / 2;
+				font-size: $button;
+				line-height: 1;
+				text-decoration: none;
+			}
+
+			.button {
+				text-align: center;
+				padding-left: $padding;
+				padding-right: $padding;
+				color: $white;
+				background-color: $international-orange;
+				cursor: pointer;
+			}
+		}
+
+		#subscribe {
+			background-color: $international-orange;
+			color: $white;
+
+			input {
+				height: 36px;
+			}
+
+			.button {
+				background-color: $orange;
+			}
+
+			#email {
+				margin-right: $padding - 5px;
+				width: 220px;
+			}
+
+			#subscribe-success {
+				display: none;
+				@include animation(fade-in .6s $easing);
+
+				h2 {
+					label {
+						font-weight: $book;
+					}
+				}
+
+				p:first-child {
+					font-size: $button;
+					line-height: $buttonLineHeight;
+					margin-top: 0;
+				}
+
+				p:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			.submitted & {
+				#subscribe-cta {
+					display: none;
+				}
+
+				#subscribe-success {
+					display: block;
+				}
+			}
+		}
+
+		#sayhi {
+			padding-top: $padding * 2;
+
+			svg {
+				width: 280px;
+
+				path {
+					fill: $international-orange;
+				}
+			}
+
+			.desktop {
+				display: none !important;
+			}
+
+			#click-thru {
+				a {
+					display: block;
+				}
+			}
+
+			footer {
+				font-size: $small;
+				line-height: $smallLineHeight;
+
+				ul {
+					list-style: none;
+
+					li {
+						margin-bottom: $padding / 2;
+						
+						&:last-child {
+							margin-bottom: 0;
+						}
+
+						a {
+							color: $blue;
+							font-weight: $bold;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen
+	and (min-width: 769px) {
+		.loaded & {
+			@include background-size(cover);
+			background-position: center center;
+			background-repeat: no-repeat;
+
+			@for $i from 0 through 4 {
+				&.bg-#{$i} {
+					background-image: url(../images/bg-#{$i}.jpg);
+				}
+		    }
+		}
+
+		background-color: $grey;
+
+		#container {
+			width: 535px;
+			margin-left: auto;
+			margin-right: auto;
+
+			section {
+				padding-left: $padding * 2;
+				padding-right: $padding * 2;
+			}
+
+			#subscribe {
+				#email {
+					width: 300px;
+				}
+
+				#subscribe-success {
+					p:first-child {
+						margin-top: $padding;
+					}
+				}
+			}
+
+			#sayhi {
+				#click-thru {
+					a {
+						display: none;
+
+						&.desktop {
+							display: inline-block !important;
+						}
+					}
+				}
+
+				footer {
+					p {
+						margin-bottom: $padding / 2;
+					}
+
+					ul {
+						width: 100%;
+						overflow: hidden;
+
+						li {
+							float: left;
+							margin-bottom: 0;
+							margin-right: $padding / 2;
+
+							&:last-child {
+								margin-right: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

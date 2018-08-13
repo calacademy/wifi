@@ -1,16 +1,275 @@
-/* line 5, ../sass/global.scss */
+@-moz-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 14, ../sass/global.scss */
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+/* line 19, ../sass/global.scss */
 body {
   margin: 0;
   padding: 0;
   font-weight: 400;
   background-color: #ffffff;
-  color: #1a1a1a;
-  font-size: 16px;
-  line-height: 20px;
+  color: #575757;
+  font-size: 14px;
+  line-height: 18px;
 }
-/* line 6, ../sass/global.scss */
+/* line 20, ../sass/global.scss */
 body, body *, body *:focus {
-  font-family: 'Whitney A', 'Whitney B', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-tap-highlight-color: transparent;
   outline: none !important;
+}
+/* line 35, ../sass/global.scss */
+body * {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 43, ../sass/global.scss */
+body a:active, body a:hover, body .button:active, body .button:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+/* line 49, ../sass/global.scss */
+body #container {
+  background-color: #ffffff;
+}
+/* line 52, ../sass/global.scss */
+body #container section {
+  padding: 20px;
+  padding-bottom: 40px;
+}
+/* line 56, ../sass/global.scss */
+body #container section h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 35px;
+}
+/* line 62, ../sass/global.scss */
+body #container section h2 {
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 25px;
+}
+/* line 69, ../sass/global.scss */
+body #container section p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* line 74, ../sass/global.scss */
+body #container section input,
+body #container section .button {
+  border: 0;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+}
+/* line 83, ../sass/global.scss */
+body #container section .button {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+  background-color: #f27134;
+  cursor: pointer;
+}
+/* line 93, ../sass/global.scss */
+body #container #subscribe {
+  background-color: #f27134;
+  color: #ffffff;
+}
+/* line 97, ../sass/global.scss */
+body #container #subscribe input {
+  height: 36px;
+}
+/* line 101, ../sass/global.scss */
+body #container #subscribe .button {
+  background-color: #e05920;
+}
+/* line 105, ../sass/global.scss */
+body #container #subscribe #email {
+  margin-right: 15px;
+  width: 220px;
+}
+/* line 110, ../sass/global.scss */
+body #container #subscribe #subscribe-success {
+  display: none;
+  -moz-animation: fade-in 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-animation: fade-in 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: fade-in 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 115, ../sass/global.scss */
+body #container #subscribe #subscribe-success h2 label {
+  font-weight: 400;
+}
+/* line 120, ../sass/global.scss */
+body #container #subscribe #subscribe-success p:first-child {
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 0;
+}
+/* line 126, ../sass/global.scss */
+body #container #subscribe #subscribe-success p:last-child {
+  margin-bottom: 0;
+}
+/* line 132, ../sass/global.scss */
+.submitted body #container #subscribe #subscribe-cta {
+  display: none;
+}
+/* line 136, ../sass/global.scss */
+.submitted body #container #subscribe #subscribe-success {
+  display: block;
+}
+/* line 142, ../sass/global.scss */
+body #container #sayhi {
+  padding-top: 40px;
+}
+/* line 145, ../sass/global.scss */
+body #container #sayhi svg {
+  width: 280px;
+}
+/* line 148, ../sass/global.scss */
+body #container #sayhi svg path {
+  fill: #f27134;
+}
+/* line 153, ../sass/global.scss */
+body #container #sayhi .desktop {
+  display: none !important;
+}
+/* line 158, ../sass/global.scss */
+body #container #sayhi #click-thru a {
+  display: block;
+}
+/* line 163, ../sass/global.scss */
+body #container #sayhi footer {
+  font-size: 12px;
+  line-height: 16px;
+}
+/* line 167, ../sass/global.scss */
+body #container #sayhi footer ul {
+  list-style: none;
+}
+/* line 170, ../sass/global.scss */
+body #container #sayhi footer ul li {
+  margin-bottom: 10px;
+}
+/* line 173, ../sass/global.scss */
+body #container #sayhi footer ul li:last-child {
+  margin-bottom: 0;
+}
+/* line 177, ../sass/global.scss */
+body #container #sayhi footer ul li a {
+  color: #186AA8;
+  font-weight: 700;
+}
+@media only screen and (min-width: 769px) {
+  /* line 19, ../sass/global.scss */
+  body {
+    background-color: #575757;
+  }
+  /* line 189, ../sass/global.scss */
+  .loaded body {
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  /* line 195, ../sass/global.scss */
+  .loaded body.bg-0 {
+    background-image: url(../images/bg-0.jpg);
+  }
+  /* line 195, ../sass/global.scss */
+  .loaded body.bg-1 {
+    background-image: url(../images/bg-1.jpg);
+  }
+  /* line 195, ../sass/global.scss */
+  .loaded body.bg-2 {
+    background-image: url(../images/bg-2.jpg);
+  }
+  /* line 195, ../sass/global.scss */
+  .loaded body.bg-3 {
+    background-image: url(../images/bg-3.jpg);
+  }
+  /* line 195, ../sass/global.scss */
+  .loaded body.bg-4 {
+    background-image: url(../images/bg-4.jpg);
+  }
+  /* line 203, ../sass/global.scss */
+  body #container {
+    width: 535px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 208, ../sass/global.scss */
+  body #container section {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  /* line 214, ../sass/global.scss */
+  body #container #subscribe #email {
+    width: 300px;
+  }
+  /* line 219, ../sass/global.scss */
+  body #container #subscribe #subscribe-success p:first-child {
+    margin-top: 20px;
+  }
+  /* line 227, ../sass/global.scss */
+  body #container #sayhi #click-thru a {
+    display: none;
+  }
+  /* line 230, ../sass/global.scss */
+  body #container #sayhi #click-thru a.desktop {
+    display: inline-block !important;
+  }
+  /* line 237, ../sass/global.scss */
+  body #container #sayhi footer p {
+    margin-bottom: 10px;
+  }
+  /* line 241, ../sass/global.scss */
+  body #container #sayhi footer ul {
+    width: 100%;
+    overflow: hidden;
+  }
+  /* line 245, ../sass/global.scss */
+  body #container #sayhi footer ul li {
+    float: left;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  /* line 250, ../sass/global.scss */
+  body #container #sayhi footer ul li:last-child {
+    margin-right: 0;
+  }
 }

@@ -1,3 +1,6 @@
+$padding: 20px;
+$easing: cubic-bezier(.215, .61, .355, 1);
+
 // font weights
 $light: 300;
 $book: 400;
@@ -6,13 +9,25 @@ $semibold: 600;
 $bold: 700;
 
 // font sizes
-$global: 16px; 
-$globalLineHeight: 20px;
+$global: 14px; 
+$globalLineHeight: 18px;
 
-// breakpoints
-$breakSmartphone: 320px;
-$breakTablet: 768px;
-$breakDesktop: 1000px;
+$header: 32px;
+$headerLineHeight: 35px;
 
-@import "_colors";
-@import "_mixins";
+$subheader: 22px;
+$subheaderLineHeight: 25px;
+
+$button: 16px;
+$buttonLineHeight: 19px;
+$small: 12px;
+$smallLineHeight: 16px;
+
+// colors
+$black: #1a1a1a;
+$white: #ffffff;
+
+$grey: #575757;
+$blue: #186AA8;
+$international-orange: #f27134;
+$orange: #e05920;
