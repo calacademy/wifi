@@ -1,4 +1,5 @@
 var WiFi = function () {
+	var _endpoint = 'https://legacy.calacademy.org/enews/maropost/';
 	var _originalPlaceholder = $('.email').attr('placeholder');
 	
 	var _msgs = {
@@ -18,6 +19,23 @@ var WiFi = function () {
 		return (arr[1].indexOf('.') !== -1);
 	}
 
+	var _onSuccess = function (data, textStatus, XMLHttpRequest) {
+		if (data.error) {
+			_onError();
+		} else {
+			$('.email').blur();
+			$('html').addClass('submitted');	
+		}
+	}
+
+	var _onError = function (XMLHttpRequest, textStatus, errorThrown) {
+		$('.email').val('');
+		$('.email').removeAttr('disabled');
+		$('.email').attr('placeholder', _msgs.serverError);
+
+		$('form').removeClass('submitting');
+	}
+
 	var _onSubmit = function (e) {
 		if ($(this).hasClass('submitting')) {
 			return false;
@@ -29,9 +47,9 @@ var WiFi = function () {
 		var email = $.trim(field.val()).toLowerCase();
 
 		if (!_isEmail(email)) {
-			$(this).removeClass('submitting');
 			field.val('');
 			field.attr('placeholder', _msgs.invalid);
+			$(this).removeClass('submitting');
 			return false;
 		}
 
@@ -68,18 +86,10 @@ var WiFi = function () {
 
 		$.ajax({
 			dataType: 'jsonp',
-			url: 'https://legacy.calacademy.org/enews/maropost/',
+			url: _endpoint,
 			data: data,
-			success: function (data, textStatus, XMLHttpRequest) {
-				field.blur();
-			},
-			error: function (XMLHttpRequest, textStatus, errorThrown) {
-				field.val('');
-				field.removeAttr('disabled');
-				field.attr('placeholder', _msgs.serverError);
-
-				$(this).removeClass('submitting');
-			}
+			success: _onSuccess,
+			error: _onError
 		});
 
 		return false;
