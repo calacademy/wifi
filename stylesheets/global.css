@@ -64,8 +64,8 @@ body #container {
 }
 /* line 52, ../sass/global.scss */
 body #container section {
-  padding: 20px;
-  padding-bottom: 40px;
+  padding: 18px;
+  padding-bottom: 36px;
 }
 /* line 56, ../sass/global.scss */
 body #container section h1 {
@@ -82,14 +82,14 @@ body #container section h2 {
 }
 /* line 69, ../sass/global.scss */
 body #container section p {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 /* line 74, ../sass/global.scss */
 body #container section input,
 body #container section .button {
   border: 0;
-  padding: 10px;
+  padding: 9px;
   font-size: 16px;
   line-height: 1;
   text-decoration: none;
@@ -97,8 +97,8 @@ body #container section .button {
 /* line 83, ../sass/global.scss */
 body #container section .button {
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 18px;
+  padding-right: 18px;
   color: #ffffff;
   background-color: #f27134;
   cursor: pointer;
@@ -118,7 +118,7 @@ body #container #subscribe .button {
 }
 /* line 105, ../sass/global.scss */
 body #container #subscribe #email {
-  margin-right: 15px;
+  margin-right: 13px;
   width: 220px;
 }
 /* line 110, ../sass/global.scss */
@@ -152,7 +152,7 @@ body #container #subscribe #subscribe-success p:last-child {
 }
 /* line 142, ../sass/global.scss */
 body #container #sayhi {
-  padding-top: 40px;
+  padding-top: 36px;
 }
 /* line 145, ../sass/global.scss */
 body #container #sayhi svg {
@@ -181,7 +181,7 @@ body #container #sayhi footer ul {
 }
 /* line 170, ../sass/global.scss */
 body #container #sayhi footer ul li {
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 /* line 173, ../sass/global.scss */
 body #container #sayhi footer ul li:last-child {
@@ -229,46 +229,48 @@ body #container #sayhi footer ul li a {
   /* line 203, ../sass/global.scss */
   body #container {
     width: 535px;
+    max-height: 515px;
+    overflow: hidden;
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 208, ../sass/global.scss */
+  /* line 211, ../sass/global.scss */
   body #container section {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 36px;
+    padding-right: 36px;
   }
-  /* line 214, ../sass/global.scss */
+  /* line 217, ../sass/global.scss */
   body #container #subscribe #email {
     width: 300px;
   }
-  /* line 219, ../sass/global.scss */
+  /* line 222, ../sass/global.scss */
   body #container #subscribe #subscribe-success p:first-child {
-    margin-top: 20px;
+    margin-top: 18px;
   }
-  /* line 227, ../sass/global.scss */
+  /* line 230, ../sass/global.scss */
   body #container #sayhi #click-thru a {
     display: none;
   }
-  /* line 230, ../sass/global.scss */
+  /* line 233, ../sass/global.scss */
   body #container #sayhi #click-thru a.desktop {
     display: inline-block !important;
   }
-  /* line 237, ../sass/global.scss */
+  /* line 240, ../sass/global.scss */
   body #container #sayhi footer p {
-    margin-bottom: 10px;
+    margin-bottom: 9px;
   }
-  /* line 241, ../sass/global.scss */
+  /* line 244, ../sass/global.scss */
   body #container #sayhi footer ul {
     width: 100%;
     overflow: hidden;
   }
-  /* line 245, ../sass/global.scss */
+  /* line 248, ../sass/global.scss */
   body #container #sayhi footer ul li {
     float: left;
     margin-bottom: 0;
-    margin-right: 10px;
+    margin-right: 9px;
   }
-  /* line 250, ../sass/global.scss */
+  /* line 253, ../sass/global.scss */
   body #container #sayhi footer ul li:last-child {
     margin-right: 0;
   }
