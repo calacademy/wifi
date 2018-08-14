@@ -96,12 +96,10 @@ var WiFi = function () {
 	}
 
 	this.initialize = function () {
-		$(window).on('load', function () {
-			$('html').addClass('loaded');
-			$('body').addClass('bg-' + Math.round(Math.random() * 4));
-		});
-
 		$('form').on('submit', _onSubmit);
+
+		$('html').addClass('loaded');
+		$('body').addClass('bg-' + Math.round(Math.random() * 4));
 	}
 
 	this.initialize();
