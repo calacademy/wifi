@@ -73,10 +73,13 @@ body {
 
 			input,
 			.button {
+				@include appearance(none);
+				@include border-radius(0);
+
 				border: 0;
 				padding: $padding / 2;
 				font-size: $button;
-				line-height: 1;
+				line-height: normal;
 				text-decoration: none;
 			}
 
@@ -94,17 +97,23 @@ body {
 			background-color: $international-orange;
 			color: $white;
 
-			input {
-				height: 36px;
-			}
+			form {
+				width: 100%;
+				overflow: hidden;
 
-			.button {
-				background-color: $orange;
-			}
+				input, button {
+					display: block;
+					float: left;
+				}
 
-			#email {
-				margin-right: $padding - 5px;
-				width: 220px;
+				.button {
+					background-color: $orange;
+				}
+
+				#email {
+					margin-right: $padding - 5px;
+					width: 220px;
+				}
 			}
 
 			#subscribe-success {
@@ -189,6 +198,7 @@ body {
 		.loaded & {
 			@include background-size(cover);
 			background-position: center center;
+			background-attachment: fixed;
 			background-repeat: no-repeat;
 
 			@for $i from 0 through 4 {
@@ -215,8 +225,10 @@ body {
 			}
 
 			#subscribe {
-				#email {
-					width: 300px;
+				form {
+					#email {
+						width: 300px;
+					}
 				}
 
 				#subscribe-success {
