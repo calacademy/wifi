@@ -239,11 +239,10 @@ body #container #sayhi footer ul li a {
   .loaded body.bg-4 {
     background-image: url(../images/bg-4.jpg);
   }
-  /* line 214, ../sass/global.scss */
+  /* line 215, ../sass/global.scss */
   body #container {
     width: 535px;
-    min-height: 515px;
-    max-height: 515px;
+    height: 515px;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -287,5 +286,23 @@ body #container #sayhi footer ul li a {
   /* line 267, ../sass/global.scss */
   body #container #sayhi footer ul li:last-child {
     margin-right: 0;
+  }
+}
+@media only screen and (min-width: 769px) and (min-height: 516px) {
+  /* line 19, ../sass/global.scss */
+  body {
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  /* line 283, ../sass/global.scss */
+  body #container {
+    position: relative;
+    height: 516px;
+    top: 50%;
+    -moz-transform: translate3d(0, -50%, 0);
+    -ms-transform: translate3d(0, -50%, 0);
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
   }
 }

@@ -195,7 +195,7 @@ body {
 	}
 
 	@media only screen
-	and (min-width: 769px) {
+	and (min-width: $desktopBreakpoint + 1) {
 		.loaded & {
 			@include background-size(cover);
 			background-position: center center;
@@ -210,11 +210,11 @@ body {
 		}
 
 		background-color: $grey;
+		
 
 		#container {
 			width: 535px;
-			min-height: 515px;
-			max-height: 515px;
+			height: $containerHeight;
 			overflow: hidden;
 
 			margin-left: auto;
@@ -271,6 +271,20 @@ body {
 					}
 				}
 			}
+		}
+	}
+
+	// vertically center
+	@media only screen
+	and (min-width: $desktopBreakpoint + 1)
+	and (min-height: $containerHeight + 1) {
+		@include transform-style(preserve-3d);
+
+		#container {
+			position: relative;
+			height: $containerHeight + 1;
+			top: 50%;
+			@include transform(translate3d(0, -50%, 0));
 		}
 	}
 }
