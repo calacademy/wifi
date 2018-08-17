@@ -168,38 +168,39 @@ body #container #sayhi {
 /* line 154, ../sass/global.scss */
 body #container #sayhi svg {
   width: 50%;
+  max-height: 100%;
   min-width: 200px;
 }
-/* line 158, ../sass/global.scss */
+/* line 159, ../sass/global.scss */
 body #container #sayhi svg path {
   fill: #f27134;
 }
-/* line 163, ../sass/global.scss */
+/* line 164, ../sass/global.scss */
 body #container #sayhi .desktop {
   display: none !important;
 }
-/* line 168, ../sass/global.scss */
+/* line 169, ../sass/global.scss */
 body #container #sayhi #click-thru a {
   display: block;
 }
-/* line 173, ../sass/global.scss */
+/* line 174, ../sass/global.scss */
 body #container #sayhi footer {
   font-size: 12px;
   line-height: 16px;
 }
-/* line 177, ../sass/global.scss */
+/* line 178, ../sass/global.scss */
 body #container #sayhi footer ul {
   list-style: none;
 }
-/* line 180, ../sass/global.scss */
+/* line 181, ../sass/global.scss */
 body #container #sayhi footer ul li {
   margin-bottom: 4px;
 }
-/* line 183, ../sass/global.scss */
+/* line 184, ../sass/global.scss */
 body #container #sayhi footer ul li:last-child {
   margin-bottom: 0;
 }
-/* line 187, ../sass/global.scss */
+/* line 188, ../sass/global.scss */
 body #container #sayhi footer ul li a {
   color: #186AA8;
   font-weight: 700;
@@ -209,7 +210,7 @@ body #container #sayhi footer ul li a {
   body {
     background-color: #575757;
   }
-  /* line 199, ../sass/global.scss */
+  /* line 200, ../sass/global.scss */
   .loaded body {
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -219,27 +220,27 @@ body #container #sayhi footer ul li a {
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
-  /* line 206, ../sass/global.scss */
+  /* line 207, ../sass/global.scss */
   .loaded body.bg-0 {
     background-image: url(../images/bg-0.jpg);
   }
-  /* line 206, ../sass/global.scss */
+  /* line 207, ../sass/global.scss */
   .loaded body.bg-1 {
     background-image: url(../images/bg-1.jpg);
   }
-  /* line 206, ../sass/global.scss */
+  /* line 207, ../sass/global.scss */
   .loaded body.bg-2 {
     background-image: url(../images/bg-2.jpg);
   }
-  /* line 206, ../sass/global.scss */
+  /* line 207, ../sass/global.scss */
   .loaded body.bg-3 {
     background-image: url(../images/bg-3.jpg);
   }
-  /* line 206, ../sass/global.scss */
+  /* line 207, ../sass/global.scss */
   .loaded body.bg-4 {
     background-image: url(../images/bg-4.jpg);
   }
-  /* line 215, ../sass/global.scss */
+  /* line 216, ../sass/global.scss */
   body #container {
     width: 535px;
     height: 515px;
@@ -247,43 +248,43 @@ body #container #sayhi footer ul li a {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 223, ../sass/global.scss */
+  /* line 224, ../sass/global.scss */
   body #container section {
     padding-left: 36px;
     padding-right: 36px;
   }
-  /* line 230, ../sass/global.scss */
+  /* line 231, ../sass/global.scss */
   body #container #subscribe form #email {
     width: 300px;
   }
-  /* line 236, ../sass/global.scss */
+  /* line 237, ../sass/global.scss */
   body #container #subscribe #subscribe-success p:first-child {
     margin-top: 18px;
   }
-  /* line 244, ../sass/global.scss */
+  /* line 245, ../sass/global.scss */
   body #container #sayhi #click-thru a {
     display: none;
   }
-  /* line 247, ../sass/global.scss */
+  /* line 248, ../sass/global.scss */
   body #container #sayhi #click-thru a.desktop {
     display: inline-block !important;
   }
-  /* line 254, ../sass/global.scss */
+  /* line 255, ../sass/global.scss */
   body #container #sayhi footer p {
     margin-bottom: 9px;
   }
-  /* line 258, ../sass/global.scss */
+  /* line 259, ../sass/global.scss */
   body #container #sayhi footer ul {
     width: 100%;
     overflow: hidden;
   }
-  /* line 262, ../sass/global.scss */
+  /* line 263, ../sass/global.scss */
   body #container #sayhi footer ul li {
     float: left;
     margin-bottom: 0;
     margin-right: 9px;
   }
-  /* line 267, ../sass/global.scss */
+  /* line 268, ../sass/global.scss */
   body #container #sayhi footer ul li:last-child {
     margin-right: 0;
   }
@@ -295,7 +296,7 @@ body #container #sayhi footer ul li a {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
   }
-  /* line 283, ../sass/global.scss */
+  /* line 284, ../sass/global.scss */
   body #container {
     position: relative;
     height: 516px;
