@@ -205,7 +205,7 @@ body {
 
 			@for $i from 0 through 4 {
 				&.bg-#{$i} {
-					background-image: url(../images/bg-#{$i}.jpg);
+					background-image: url(images/bg-#{$i}.jpg);
 				}
 		    }
 		}
