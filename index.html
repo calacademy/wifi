@@ -28,6 +28,7 @@
     <script>
 
       var WiFi = function () {
+        var _numImages = 3;
         var _endpoint = 'https://legacy.calacademy.org/enews/maropost/';
         var _originalPlaceholder = $('.email').attr('placeholder');
         
@@ -128,7 +129,7 @@
           $('form').on('submit', _onSubmit);
 
           $('html').addClass('loaded');
-          $('body').addClass('bg-' + Math.round(Math.random() * 4));
+          $('body').addClass('bg-' + Math.round(Math.random() * (_numImages - 1)));
         }
 
         this.initialize();
