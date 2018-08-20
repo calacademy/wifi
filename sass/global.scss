@@ -54,7 +54,7 @@ body {
 			padding-bottom: $padding * 2;
 
 			h1 {
-				font-weight: $bold;
+				font-weight: $medium;
 				font-size: $header;
 				line-height: $headerLineHeight;	
 			}
@@ -152,12 +152,11 @@ body {
 			padding-top: ($padding * 2) - 5px;
 
 			svg {
-				width: 50%;
+				width: $logoWidth;
 				max-height: 100%;
-				min-width: 200px;
 
 				path {
-					fill: $international-orange;
+					fill: $blackLogo;
 				}
 			}
 
@@ -171,9 +170,18 @@ body {
 				}
 			}
 
+			#svg-container {
+				margin-bottom: $padding / 2;
+			}
+
 			footer {
 				font-size: $small;
 				line-height: $smallLineHeight;
+
+				p {
+					margin-top: $padding / 2;
+					margin-bottom: $padding / 2;
+				}
 
 				ul {
 					list-style: none;
@@ -247,6 +255,7 @@ body {
 
 						&.desktop {
 							display: inline-block !important;
+							width: $logoWidth;
 						}
 					}
 				}
