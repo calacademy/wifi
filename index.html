@@ -33,12 +33,32 @@
         var _numImages = 3;
         var _endpoint = 'https://legacy.calacademy.org/enews/maropost/';
         var _originalPlaceholder = $('.email').attr('placeholder');
+        var _email = '';
         
         var _msgs = {
           submitting: 'Submitting...',
           serverError: 'Oops. Please try again...',
           invalid: 'Oops. Invalid email...'
         };
+
+        var _track = function (action, email) {
+          if (typeof(ga) != 'function') return;
+
+          var tracker = ga.getAll()[0];
+          if (typeof(tracker.send) != 'function') return;
+
+          var label = window.location.href;
+
+          if (typeof(email) == 'string') {
+            if ($.trim(email) == '') {
+              email = 'EMPTY';
+            }
+
+            label += ' (' + email + ')';
+          }
+
+          tracker.send('event', 'eNews Popup / wifi', action, label);    
+        }
 
         var _isEmail = function (value) {
           var isValid = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test( value );
@@ -55,12 +75,16 @@
           if (data.error) {
             _onError();
           } else {
+            _track('success', _email);
+
             $('.email').blur();
             $('html').addClass('submitted');  
           }
         }
 
         var _onError = function (XMLHttpRequest, textStatus, errorThrown) {
+          _track('server error', _email);
+
           $('.email').val('');
           $('.email').removeAttr('disabled');
           $('.email').attr('placeholder', _msgs.serverError);
@@ -79,6 +103,8 @@
           var email = $.trim(field.val()).toLowerCase();
 
           if (!_isEmail(email)) {
+            _track('invalid', email);
+
             field.val('');
             field.attr('placeholder', _msgs.invalid);
             $(this).removeClass('submitting');
@@ -115,6 +141,8 @@
 
             data.custom_field = JSON.stringify(jsonObj);
           }
+
+          _email = email;
 
           $.ajax({
             dataType: 'jsonp',
