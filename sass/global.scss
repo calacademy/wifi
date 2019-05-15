@@ -27,7 +27,7 @@ body {
 	padding: 0;
 	font-weight: $book;
 	background-color: $white;
-	color: $grey;
+	color: $black;
 
 	font-size: $global;
 	line-height: $globalLineHeight;
@@ -39,11 +39,22 @@ body {
 		@include box-sizing(border-box);
 	}
 
-	a, .button {
+	a {
 		&:active,
 		&:hover {
 			@include opacity(0.7);
 		}	
+	}
+
+	.button {
+		background-color: $green;
+		color: $black;
+
+		&:hover,
+		&:active {
+			color: $white;
+			background-color: $teal;
+		}
 	}
 
 	#container {
@@ -87,15 +98,13 @@ body {
 				text-align: center;
 				padding-left: $padding;
 				padding-right: $padding;
-				color: $white;
-				background-color: $international-orange;
 				cursor: pointer;
 			}
 		}
 
 		#subscribe {
-			background-color: $international-orange;
-			color: $white;
+			background-color: $green;
+			color: $black;
 
 			form {
 				width: 100%;
@@ -107,7 +116,12 @@ body {
 				}
 
 				.button {
-					background-color: $orange;
+					background-color: $green-light;
+
+					&:hover,
+					&:active {
+						background-color: $teal;
+					}
 				}
 
 				#email {
@@ -155,8 +169,8 @@ body {
 				width: $logoWidth;
 				max-height: 100%;
 
-				path {
-					fill: $blackLogo;
+				* {
+					fill: $teal;
 				}
 			}
 
@@ -194,8 +208,7 @@ body {
 						}
 
 						a {
-							color: $blue;
-							font-weight: $bold;
+							color: $grey-dark;
 						}
 					}
 				}
@@ -218,9 +231,8 @@ body {
 		    }
 		}
 
-		background-color: $grey;
+		background-color: $grey-bg;
 		
-
 		#container {
 			width: 535px;
 			height: $containerHeight;
