@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PCB865H');</script>
-    <!-- End Google Tag Manager -->
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1" />
@@ -41,25 +34,6 @@
           invalid: 'Oops. Invalid email...'
         };
 
-        var _track = function (action, email) {
-          if (typeof(ga) != 'function') return;
-
-          var tracker = ga.getAll()[0];
-          if (typeof(tracker.send) != 'function') return;
-
-          var label = window.location.href;
-
-          if (typeof(email) == 'string') {
-            if ($.trim(email) == '') {
-              email = 'EMPTY';
-            }
-
-            label += ' (' + email + ')';
-          }
-
-          tracker.send('event', 'eNews Popup / wifi', action, label);
-        }
-
         var _isEmail = function (value) {
           var isValid = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test( value );
 
@@ -75,16 +49,12 @@
           if (data.error) {
             _onError();
           } else {
-            _track('success', _email);
-
             $('.email').blur();
             $('html').addClass('submitted');
           }
         }
 
         var _onError = function (XMLHttpRequest, textStatus, errorThrown) {
-          _track('server error', _email);
-
           $('.email').val('');
           $('.email').removeAttr('disabled');
           $('.email').attr('placeholder', _msgs.serverError);
@@ -103,8 +73,6 @@
           var email = $.trim(field.val()).toLowerCase();
 
           if (!_isEmail(email)) {
-            _track('invalid', email);
-
             field.val('');
             field.attr('placeholder', _msgs.invalid);
             $(this).removeClass('submitting');
@@ -153,10 +121,6 @@
 
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCB865H"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <div id="container">
       <section id="subscribe">
